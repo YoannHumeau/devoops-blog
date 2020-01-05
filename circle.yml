@@ -40,7 +40,7 @@ jobs:
           command: sudo apt install lftp
       - run:
           name: copy lftp
-          command: lftp ftp://${username}:${password}@${url_ftp} -e "mirror -e -R -x images/ _site/ ${destination_path} ; quit"
+          command: lftp ftp://${username}:${password}@${url_ftp} -e "mirror -e -R -x images _site/ ${destination_path} ; quit"
 
 workflows:
   version: 2
